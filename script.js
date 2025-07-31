@@ -57,7 +57,7 @@ const perguntas = [
     },
 
  { 
-        enunciado: "?",
+        enunciado: "qual o preço de uma moto de motocross?",
         alternativas: [
             {
                 texto: " o valor pode chegar até 85.000 dependendo do modelo ",
@@ -72,4 +72,35 @@ const perguntas = [
             }
         ]
     },
+ { 
+        enunciado: "A partir de que idade pode se praticar motocross?",
+        alternativas: [
+            {
+                texto: "A partir dos cinco anos geralmente",
+                afirmação: "Resposta correta",
+                pontos:1
+            },
+
+            {
+                texto:" A partir dos 12 anos geralmente",
+                afirmação:"Resposta errada", 
+                pontos:0 
+            }
+        ]
+    },
 ]
+const perguntas = [
+]
+},
+]
+let atual=0;
+let perguntaAtual;
+let historiaFinal="";
+let pontos=0;
+
+function mostraPergunta(){
+    perguntaAtual=perguntas[atual];
+    caixaPerguntas.textContent=perguntaAtual.enunciado;
+    caixaAlternativas.textContent="";
+    mostraPergunta();
+}
